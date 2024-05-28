@@ -95,16 +95,22 @@ console.log(animals.length); // Print length
 be accessed using index
 */
 var friends = []; // Assigning friends to an empty array
-// Create function that taked parameter i
-// Use for loop to iterate over animals array
+// Create function that takes parameter of an array
+// Use Math.random to generate random whole number
+// Set i equal to random whole number generated
+// Return the array at the index of the random number generated
 function getRandom(array){
-for (var i = 0; i < array.length; i ++){
-  return Math.random(array[i]); // Return random index of animals
-};
+  const minCeiled = Math.ceil(0);
+  const maxFloored = Math.floor(array.length);
+var i = Math.floor(Math.random() * (maxFloored - minCeiled) + minCeiled);
+  return array[i]
 }
 // Access element from animals using getRandom function
-// Push the random element onto friends array
-friends.push(getRandom(animals));
+// Push the name key of the random element onto friends array
+friends.push(getRandom(animals)['name']);
+console.log(friends);
+// Add friends array as a key to an animal in the animals array
+animals[0]['friends'] = friends;
 
 /**
  * Nice work! You're done Part 1. Pat yourself on the back and

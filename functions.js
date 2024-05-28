@@ -12,6 +12,28 @@
 //////////////////////////////////////////////////////////////////////
 // Step 1 - Search ///////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
+/*
+I: Array and a String
+O: Animal's object or null
+C: n/a
+E: n/a
+*/
+// Function takes parameters of array and string
+// Push values of objects in the array onto storage array
+// Use includes() method to see if string exists inside of the storage array
+// Return that animal's object if yes
+// Return null if not
+// 
+function search(array, string){
+    var nameExists = [];
+    for (var i = 0; i <= array.length - 1; i ++){
+        if (array[i]['name'].includes(string)){
+            nameExists.push(string);
+            return array[i];
+        } 
+        }
+        return null;
+    }
 
 
 
