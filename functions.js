@@ -40,8 +40,22 @@ function search(array, string){
 //////////////////////////////////////////////////////////////////////
 // Step 2 - Replace //////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
-
-
+/* 
+I: Animals array, string of animal name, replacement animal object
+O: Replace animal object on animals array with repalcement object if the 
+animal name string exists on animals array
+C: n/a
+E: n/a
+*/
+// Create storage array that contains names within the objects of the animals array
+function replace(animals, name, replacement){
+    for (var i = 0; i < animals.length; i++){
+        if (animals[i].name.includes(name) === true){
+            animals.splice(i, 1, replacement);
+        }
+    }
+    return animals;
+}
 
 //////////////////////////////////////////////////////////////////////
 // Step 3 - Remove ///////////////////////////////////////////////////
