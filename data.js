@@ -103,11 +103,11 @@ function getRandom(array){
   const minCeiled = Math.ceil(0);
   const maxFloored = Math.floor(array.length);
 var i = Math.floor(Math.random() * (maxFloored - minCeiled) + minCeiled);
-  return i
+  return i;
 }
 // Access element from animals using getRandom function
 // Push the name key of the random element onto friends array
-friends.push(getRandom(animals)['name']);
+friends.push(animals[getRandom(animals)]['name']);
 console.log(friends);
 // Add friends array as a key to an animal in the animals array
 animals[0]['friends'] = friends;
